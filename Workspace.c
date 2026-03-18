@@ -90,13 +90,53 @@ int big(void){
     }
     return EXIT_SUCCESS;
 }
-int main(void){
-    not();
-    num();
-    evenodd();
-    negtopos();
-    big();
+int abswap(void){
+    int a=5,b=7;
+    printf("a=%d b=%d\n", a, b);
+    a = a+b;
+    b = a-b;
+    a = a-b;
+    printf("a=%d b=%d\n", a, b);
+//    çarpma bölme ve toplama çıkarma ile yer değişimi böyle
+    a=a*b;
+    b=a/b;
+    a=a/b;
+    printf("a=%d b=%d\n", a, b);
     return EXIT_SUCCESS;
 }
+int binary(void){
+    int a;
+    int q,w,e,r;
+    printf("Enter A:");
+    scanf("%d",&a);
+    q=a%2;
+    w=(a/2)%2;
+    e=(a/2/2)%2;
+    r=(a/2/2/2)%2;
+    printf("Binary of A is: %d%d%d%d\n",r,e,w,q);
+    return EXIT_SUCCESS;
+}
+int xor(void){
+    int a=5,b=7;
+    printf("a=%d b=%d\n",a,b);
+    a=a^b;
+    b=b^a;
+    a=b^a;
+    printf("a=%d b=%d\n",a,b);
+//    xor 0^0=0 1^1=0 1^0=1 0^1=1 ram kullanmaz sadece cpu o yüzden hızlı
+    return EXIT_SUCCESS;
+}
+int main(void){
+//    not();
+//    num();
+//    evenodd();
+//    negtopos();
+//    big();
+//    abswap();
+    binary();
+//    xor();
+    return EXIT_SUCCESS;
+}
+
 
 
