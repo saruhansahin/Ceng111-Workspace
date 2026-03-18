@@ -81,7 +81,7 @@ int big(void){
     scanf("%d", &b);
     printf("Enter a number:");
     scanf("%d", &c);
-    if (a> b && a>c){
+    if (a>b && a>c){
         printf("Bigger one is: %d\n", a);
     } else if(b>c && b>a){
         printf("Bigger one is: %d\n",b);
@@ -126,6 +126,94 @@ int xor(void){
 //    xor 0^0=0 1^1=0 1^0=1 0^1=1 ram kullanmaz sadece cpu o yüzden hızlı
     return EXIT_SUCCESS;
 }
+int bigV2(void){
+    int a;
+    int b;
+    int c;
+    printf("Enter a number:");
+    scanf("%d", &a);
+    printf("Enter a number:");
+    scanf("%d", &b);
+    printf("Enter a number:");
+    scanf("%d", &c);
+    if (a>b){
+        if(a>c){
+            printf("Bigger one is: %d\n", a);
+        }else{
+            printf("Bigger one is: %d\n", c);
+        }
+    } else {
+        if(b>c){
+            printf("Bigger one is: %d\n", b);
+        }else{
+            printf("Bigger one is: %d\n", c);
+        }
+    }
+    return EXIT_SUCCESS;
+}
+int bigV3(void){
+    int a;
+    int b;
+    int c;
+    printf("Enter a number:");
+    scanf("%d", &a);
+    printf("Enter a number:");
+    scanf("%d", &b);
+    printf("Enter a number:");
+    scanf("%d", &c);
+    printf("Bigger one is: %d\n",(a>b?a:b)>c?a:c);
+    return EXIT_SUCCESS;
+}
+int vowel(void){
+    char a;
+    printf("Enter a charachter: ");
+    scanf("%c",&a);
+    if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
+        printf("Charachter is a vowel.\n");
+    }else{
+        printf("Charachter is not a vowel.\n");
+    }
+    return EXIT_SUCCESS;
+}
+int age(void){
+    int a;
+    printf("Enter Age:");
+    scanf("%d", &a);
+    if(a<=12&&a>=0){
+        printf("Child\n");
+    }else if(a>=13&&a<=19){
+        printf("Teenager\n");
+    }else if(a>=20&&a<=64){
+        printf("Adult\n");
+    }else{
+        printf("Senior\n");
+    }
+    return EXIT_SUCCESS;
+}
+int leapyear(void){
+    int a;
+    printf("Enter Year:");
+    scanf("%d", &a);
+    if(a%400==0){
+        printf("Leap year\n");
+    } else if(a%100==0 && a%4==0){
+        printf("Not Leap Year\n");
+    } else if(a%100!=0 && a%4==0){
+        printf("Leap Year\n");
+    }
+    return 0;
+}
+int leapyearV2(void){
+    int a;
+    printf("Enter Year:");
+    scanf("%d", &a);
+    if(a%4==0 && (a%400==0 || a%100!=0)){
+        printf("Leap Year\n");
+    }else{
+        printf("Not Leap Year\n");
+    }
+    return 0;
+}
 int main(void){
 //    not();
 //    num();
@@ -133,10 +221,13 @@ int main(void){
 //    negtopos();
 //    big();
 //    abswap();
-    binary();
+//    binary();
 //    xor();
+//    bigV2();
+//    bigV3();
+//    vowel();
+//    age();
+//    leapyear();
+//    leapyearV2();
     return EXIT_SUCCESS;
 }
-
-
-
