@@ -214,6 +214,106 @@ int leapyearV2(void){
     }
     return 0;
 }
+int wh1le(void){
+    int i=0;
+    while(i<=10){
+        printf("%d\n",i);
+        i++;
+    }
+    return 0;
+}
+int repeat(void){
+    int i=1;
+    int r;
+    printf("Enter repeat time:");
+    scanf("%d",&r);
+    while(i<=r){
+        printf("%d\n",i);
+        i++;
+    }
+    return 0;
+}
+int countdown(void){
+    int i;
+    printf("Enter number:");
+    scanf("%d",&i);
+    while(i>=0){
+        printf("%d\n",i);
+        i--;
+    }
+    return 0;
+}
+int lettergrade(void){
+    char lg;
+    printf("Enter Your Grade(A-B-C-D-F):");
+    scanf("%c",&lg);
+    lg = toupper(lg);
+    while ((lg>70 || lg<65) || lg==69) {
+        printf("Error\n");
+        break;
+    }
+    while((lg<=70 && lg>=65)&& lg!=69){
+        if(lg==65){
+            printf("4\n");
+        }else if(lg==66){
+            printf("3\n");
+        }else if(lg==67){
+            printf("2\n");
+        }else if(lg==68){
+            printf("1\n");
+        }else{
+            printf("0\n");
+        }
+        break;
+    }
+    return 0;
+}
+int power(void){
+    int p,b,r=1;
+    printf("Enter base and power:");
+    scanf("%d %d", &b,&p);
+    while(p>=1){
+        r=r*b;
+        p--;
+    }
+    printf("Result: %d\n",r);
+    return 0;
+}
+int sumofnum(void){
+    int a,b,c,d,e,f,g,x;
+    printf("Enter X:");
+    scanf("%d",&x);
+    g=x%10;
+    x/=10;
+    f=x%10;
+    x/=10;
+    e=x%10;
+    x/=10;
+    d=x%10;
+    x/=10;
+    c=x%10;
+    x/=10;
+    b=x%10;
+    x/=10;
+    a=x%10;
+    printf("Sum:%d\n",a+b+c+d+e+f+g);
+    return 0;
+}
+int ________(void){
+    
+    return 0;
+}
+int f0r(void){
+    int i;
+    for(i = 0; i<=10; i++){
+        printf("%d\n",i);
+    }
+    return 0;
+}
+int _________(void){
+    
+    return 0;
+}
 int main(void){
 //    not();
 //    num();
@@ -229,5 +329,12 @@ int main(void){
 //    age();
 //    leapyear();
 //    leapyearV2();
+//    wh1le();
+//    f0r();
+//    repeat();
+//    countdown();
+//    lettergrade();
+//    power();
+//    sumofnum();
     return EXIT_SUCCESS;
 }
